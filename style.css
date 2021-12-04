@@ -256,7 +256,7 @@ font-size: 20px;
 		display: none;
 	}
 	.slider{
-		height: 100vh;
+		height: 80vh;
 		position: relative;
 	}
 	.slider .slide{
