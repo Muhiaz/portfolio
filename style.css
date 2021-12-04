@@ -27,6 +27,9 @@
 	width: 100%;
 	background: #250450;
 	z-index: 1000;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 .bd-grid{
 	max-width: 1024px;
@@ -40,8 +43,9 @@
 .nav{
 	height: var(--header-height);
 	display: flex;
+	width: 100%;
 	align-items: center;
-	justify-content: left;
+	justify-content: center;
 	font-size: 2.0rem;
 	
 }
@@ -99,13 +103,13 @@ body{
 .home{
 	position: relative;
 	max-width: 100%;
-	height: 80vh;
+	height: auto;
 }
 .home .caption{
 	position: relative;
 	top: 70%;
 	transform: translateY(-60%);
-	width: 90%%;
+	width: 90%;
 	color: #71bcdf;
 	text-align: left;
 	
@@ -162,7 +166,8 @@ h5{
 	letter-spacing: 2px;
 }
 .projects{
-	
+	padding-left: 0px!important;
+	text-align: center;
 }
 .projects .col-md-6 div{
 	height: 200px;
@@ -170,34 +175,19 @@ h5{
 }
 .projects .col-md-6 img{
 	width: 70%;
-	margin: auto 15%;
+	margin: auto 0px%;
 	object-fit: cover;
 }
-.slider{
-	position: relative;
-	padding-bottom: 40px;
-	height: 75vh;
-	width: 100%;
-	background: #320370 ;
-	color: #fff;
-}
+
 .slider .slide{
-	position: absolute;
-	top: 20%;
-	left: 50%;
-	transform: translateX(-50%);
-	height: 100%;
-	width: 100%;
-	opacity: 0;
+	
+	display: none;
 }
 .slide.active{
-	opacity: 1;
+	display: inline-block;
 }
 .slider .indicators{
-	position: absolute;
-	left: 50%;
-	transform: translateX(-50%);
-	bottom: 10px;
+	text-align: center;
 }
 .indicators div{
 	height: 15px;
@@ -218,6 +208,11 @@ h5{
 	background: #000080 !important;
 	margin: 5px;
 	margin: 0px;
+}
+@media screen and (min-width: 768px){
+	.footer{
+		margin-bottom: 0px !important;
+	}
 }
 @media screen and (max-width: 768px){
 	.home{
@@ -255,10 +250,7 @@ font-size: 20px;
 	.header{
 		display: none;
 	}
-	.slider{
-		height: 80vh;
-		position: relative;
-	}
+	
 	.slider .slide{
 		text-align: center;
 	}
@@ -266,16 +258,7 @@ font-size: 20px;
 		display: none !important;
 		
 	}
-	.home{
-		background: linear-gradient(to bottom,rgba(50, 3, 112,.6),rgba(50, 3, 112, .6),
-			rgba(50, 3, 112, .6)),url('istockphoto-1296368056-612x612.jpg');
-		background-repeat: no-repeat;
-		background-size: cover;
-		background-position: center;
-		background-attachment: fixed;
-		margin: 0 !important;
-		padding: 0 !important;
-	}
+	
 	.home .caption{
 		width: 80%;
 		padding: 20px;
@@ -300,12 +283,6 @@ font-size: 20px;
 	.happyclients .col-md-8{
 	padding-left: 10px;
 	
-}
-
-.projecttext{
-	position: absolute;
-	top: 100%;
-	margin-bottom: 100px;
 }
 .projects .col-md-6 img{
 	width: 90%;
